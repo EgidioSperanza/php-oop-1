@@ -44,12 +44,6 @@ class UpcomingMovie
     }
 }
 
-$movies = [];
-foreach ($result as $key => $value) {
-    array_push($movies, "movie_$key");
-}
-
-// var_dump($movies);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +59,7 @@ foreach ($result as $key => $value) {
         <h1>MovieDBool</h1>
     </header>
     <main>
-        <?php foreach ($movies as $key => $value) {
+        <?php foreach ($result as $key => $value) {
             $value = new UpcomingMovie($result[$key]);
             $value->printMovie();
             // var_dump($value);
