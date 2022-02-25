@@ -35,7 +35,7 @@ class UpcomingMovie
                 <p>$this->overview</p>
                 <img src=\"$this->photo_url\">
             </div>";
-        if($this->release_date>date("d-m-Y")){
+        if( date_create($this->release_date)>date_create(date("d-m-Y"))){
             echo "<p>In uscita il $this->release_date</p>";
         }else{
             echo "<p>Uscito il $this->release_date</p>";
